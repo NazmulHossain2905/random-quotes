@@ -25,7 +25,7 @@
 .categories {
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1;
   background-color: #fff;
 }
 
@@ -48,7 +48,6 @@
 
 /* Customize the scrollbar track when hovered */
 .categories-wrapper::-webkit-scrollbar-thumb:hover {
-  /* background: gray; */
   background: linear-gradient(45deg, crimson, blue);
 }
 
@@ -63,7 +62,6 @@
   cursor: pointer;
   user-select: none;
   color: #333;
-  /* transition: background-color 0.2s ease-in; */
 }
 
 .category:hover {
@@ -91,11 +89,11 @@
   padding: 1rem 1rem 0.5rem;
   position: relative;
 
-  border-inline-end: 5px solid;
-  border-block-end: 5px solid;
+  border-inline: 5px solid;
+  border-block: 5px solid;
   border-image-source: radial-gradient(
     circle at bottom right,
-    #000,
+    crimson,
     transparent 30%
   );
   border-image-slice: 1;
@@ -104,7 +102,7 @@
   &:hover {
     border-image-source: radial-gradient(
       circle at bottom right,
-      #000,
+      blue,
       transparent 50%
     );
     /* box-shadow: 0px 0px 20px #0004; */
@@ -174,7 +172,7 @@
   position: absolute;
   inset: 0;
   background-color: #0009;
-
+  z-index: 2;
   display: none;
   justify-content: center;
   align-items: center;
