@@ -106,7 +106,7 @@ function initialApp() {
 
   const getQuotes = (category) => {
     const loading = document.querySelector(".loading-container");
-    const LIMIT = Math.floor(Math.random() * 10 + 1);
+    // const LIMIT = Math.floor(Math.random() * 10 + 1);
 
     loading.style.display = "flex";
 
@@ -118,7 +118,7 @@ function initialApp() {
       contentType: "application/json",
     };
 
-    const URL = `https://api.api-ninjas.com/v1/quotes?category=${category}&limit=${LIMIT}`;
+    const URL = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
 
     return fetch(URL, options)
       .then((res) => {
